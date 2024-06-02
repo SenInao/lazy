@@ -4,6 +4,7 @@ return {
 
   dependencies = {
     "windwp/nvim-ts-autotag",
+    "HiPhish/nvim-ts-rainbow2"
   },
 
   config = function()
@@ -18,34 +19,23 @@ return {
 
       rainbow = {
         enable = true,
-        extended_mode = true,
-        max_file_lines = nil,
+        query = "rainbow-parens",
+        strategy = require("ts-rainbow").strategy.global,
       },
-      -- enable autotagging (w/ nvim-ts-autotag plugin)
-      autotag = {
-        enable = true,
-      },
+
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
         "javascript",
         "typescript",
         "tsx",
-        "yaml",
         "html",
         "css",
         "prisma",
-        "markdown",
-        "markdown_inline",
-        "svelte",
-        "graphql",
-        "bash",
         "lua",
         "vim",
         "dockerfile",
         "gitignore",
-        "query",
-        "vimdoc",
         "c",
 		    "python",
       },

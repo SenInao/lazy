@@ -70,23 +70,18 @@ return {
 	    return vim.fn.getcwd()
     end
   }
-
   require('lspconfig')['html'].setup {
     capabilities = capabilities
   }
-  
   require('lspconfig')['cssls'].setup {
     capabilities = capabilities
   }
-  
   require('lspconfig')['quick_lint_js'].setup {
     capabilities = capabilities
   }
-
   require("lspconfig")['tsserver'].setup {
 	  capabilities = capabilities
   }
-
   require("lspconfig")['lua_ls'].setup  {
 	  capabilities = capabilities,
 	  settings = {
@@ -96,6 +91,9 @@ return {
 			  }
 		  }
 	  }
+  }
+  require("lspconfig")["vimls"].setup {
+    capabilities = capabilities
   }
   end,
 }
