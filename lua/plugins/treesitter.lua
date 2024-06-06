@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
+  priority = 900,
 
   dependencies = {
     "windwp/nvim-ts-autotag",
@@ -13,15 +14,8 @@ return {
 
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
-      highlight = {
-        enable = true,
-      },
 
-      rainbow = {
-        enable = true,
-        query = "rainbow-parens",
-        strategy = require("ts-rainbow").strategy.global,
-      },
+      sync_install = false,
 
       -- ensure these language parsers are installed
       ensure_installed = {
@@ -40,15 +34,18 @@ return {
 		    "python",
       },
 
-      incremental_selection = {
+      highlight = {
         enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
       },
+
+      rainbow = {
+        --enable = true,
+        disable = {"jsx", "tsx"}
+      },
+
+      indent = {
+        enable = true,
+      }
     })
   end,
 }

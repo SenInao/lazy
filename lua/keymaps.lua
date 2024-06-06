@@ -1,19 +1,17 @@
-vim.g.mapleader = " "
-
 local keymap = vim.keymap
 
-local builtin = require("telescope.builtin")
 keymap.set('n', '<Esc>',  '<cmd>nohlsearch<CR>')
-keymap.set('i', '<c-c>',  '<Esc>')
+keymap.set('i', '<C-c>',  '<Esc>')
 
+local builtin = require("telescope.builtin")
 keymap.set('n', '<leader>ff', builtin.find_files, {})
 keymap.set('n', '<leader><leader>', builtin.buffers , {})
 keymap.set('n', '<leader>sd', builtin.diagnostics, {})
 keymap.set('n', '<leader>lg', builtin.live_grep, {})
 keymap.set('n', '<leader>nt', ":!start cd<CR>")
 
-keymap.set('n', '<c-p>',  ':bp<CR>')
-keymap.set('n', '<c-n>',  ':bn<CR>')
+--keymap.set('n', '<c-p>',  ':bp<CR>')
+--keymap.set('n', '<c-n>',  ':bn<CR>')
 keymap.set('n', '<c-F4>',  ':bd<CR>')
 
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
