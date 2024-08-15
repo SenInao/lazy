@@ -1,6 +1,7 @@
 return {
   "hrsh7th/nvim-cmp",
   lazy = false,
+  priority = 1000,
   event = "InsertEnter",
 
   dependencies = {
@@ -95,5 +96,8 @@ return {
   require("lspconfig")["vimls"].setup {
     capabilities = capabilities
   }
+  require("lspconfig")["clangd"].setup {
+      capabilities = capabilities
+    }
   end,
 }
