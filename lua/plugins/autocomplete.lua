@@ -80,7 +80,7 @@ return {
   require('lspconfig')['quick_lint_js'].setup {
     capabilities = capabilities
   }
-  require("lspconfig")['tsserver'].setup {
+  require("lspconfig")['ts_ls'].setup {
 	  capabilities = capabilities
   }
   require("lspconfig")['lua_ls'].setup  {
