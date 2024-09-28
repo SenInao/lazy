@@ -1,6 +1,6 @@
 return {
   "xiyaowong/transparent.nvim",
-  lazy = false,
+  lazy = true,
   config = function ()
     local transparent = require("transparent")
     transparent.clear_prefix("Lualine")
