@@ -22,14 +22,12 @@ return {
     vim.keymap.set("n", "<C-j>", function() harpoon:list():select(2) end)
     vim.keymap.set("n", "<C-k>", function() harpoon:list():select(3) end)
     vim.keymap.set("n", "<C-l>", function() harpoon:list():select(4) end)
-    vim.keymap.set("n", "<C-m>", function() harpoon:list():select(5) end)
-    vim.keymap.set("n", "<C-s>", function() harpoon:list():select(6) end)
+    vim.keymap.set("n", "<C-i>", function() harpoon:list():select(5) end)
 
     vim.keymap.set("n", "<leader><C-h>", function () harpoon:list():replace_at(1) end)
     vim.keymap.set("n", "<leader><C-j>", function () harpoon:list():replace_at(2) end)
     vim.keymap.set("n", "<leader><C-k>", function () harpoon:list():replace_at(3) end)
     vim.keymap.set("n", "<leader><C-l>", function () harpoon:list():replace_at(4) end)
-    vim.keymap.set("n", "<leader><C-m>", function () harpoon:list():replace_at(5) end)
-    vim.keymap.set("n", "<leader><C-s>", function () harpoon:list():replace_at(6) end)
+    vim.keymap.set("n", "<leader><C-i>", function () harpoon:list():replace_at(5) end)
   end
 }
