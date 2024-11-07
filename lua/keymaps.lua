@@ -17,7 +17,7 @@ keymap.set('n', '<leader>nt', ":!start cd<CR><CR>")
 keymap.set('n', '<c-F4>',  ':bd<CR>')
 
 -- Todo
-keymap.set('n', '<leader>to', ':Todo<CR>')
+keymap.set('n', '<leader>td', ':e ~/todo<CR>')
 
 -- vim diagnostics
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
