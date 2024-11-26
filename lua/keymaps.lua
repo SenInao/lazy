@@ -13,11 +13,8 @@ keymap.set('n', '<leader>lg', builtin.live_grep, {})
 -- New cmd (windows)
 keymap.set('n', '<leader>nt', ":!start cd<CR><CR>")
 
--- close buffuer
-keymap.set('n', '<c-F4>',  ':bd<CR>')
-
 -- Todo
-keymap.set('n', '<leader>td', ':e ~/todo<CR>')
+keymap.set('n', '<leader>td', ':lua MyMenu()<CR>')
 
 -- vim diagnostics
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
