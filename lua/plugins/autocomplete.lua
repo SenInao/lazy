@@ -93,6 +93,9 @@ return {
 		  }
 	  }
   }
+  require("lspconfig")["hyprls"].setup {
+    capabilities = capabilities
+  }
   require("lspconfig")["vimls"].setup {
     capabilities = capabilities
   }
