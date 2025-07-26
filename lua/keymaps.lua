@@ -19,3 +19,6 @@ keymap.set('n', '<leader>td', ':lua MyMenu()<CR>')
 -- vim diagnostics
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
 keymap.set("n", "]d", vim.diagnostic.goto_prev)
+
+-- Undotree
+keymap.set("n", "<leader>ut", ":UndotreeShow<CR>:UndotreeFocus<CR>")
