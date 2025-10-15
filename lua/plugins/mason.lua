@@ -1,5 +1,5 @@
 return {
-	"mason-org/mason.nvim",
-  lazy = false,
-  opts = {}
+  "williamboman/mason.nvim",
+  build = ":MasonUpdate",
+  opts = {}, -- Mason itself doesn’t need config
 }
