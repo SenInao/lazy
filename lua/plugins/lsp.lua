@@ -7,7 +7,6 @@ return {
     "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
-    local lspconfig = require("lspconfig")
     local mason_lspconfig = require("mason-lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -24,7 +23,7 @@ return {
       },
       automatic_installation = true,
     }
-    
+
     vim.lsp.config("*", {
         capabilities = capabilities,
     })
@@ -40,9 +39,7 @@ return {
     })
 
     vim.lsp.config("pyright", {
-      root_dir = function()
-        return vim.fn.getcwd()
-      end,
+      root_dir = vim.fn.getcwd()
     })
   end,
 }
